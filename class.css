@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');  
+
+*{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    margin: auto;  
+    width: 800px;
+}
+
+.table{
+    margin: auto;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.table > tbody{
+    display: block;
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+table td{
+    font-size: 45px;
+}
+
+
+#_0class, #_1class, #_2class, #_3class, #_4class, #_5class, #_6class, #_7class{
+    font-size: 35px;
+
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+ p{
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 50px;
+    margin: 0;
+}
+
+
+.time{
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: mediumvioletred;
+    color: white;
+}
+
+
+

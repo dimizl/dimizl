@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ZL] MAIN</title>
+
+    <link rel="stylesheet" href="class.css">
+
+</head>
+<style>
+    @import url("./main.css");
+    @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    body {
+        height: 100vh;
+
+        /*background-image: url("02.jpg");
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            background-size: cover;*/
+
+        background: url("./img/background_img.png") no-repeat center/cover;
+
+        }
+</style>
+
+<script>
+    function Go(){
+            window.location.replace("main.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    
+    function Go1(){
+            window.location.replace("class_1.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    function Go2(){
+            window.location.replace("class_2.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    function Go3(){
+            window.location.replace("class_3.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    function Go4(){
+            window.location.replace("class_4.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    function Go5(){
+            window.location.replace("class_5.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+    function Go6(){
+            window.location.replace("class_6.html" + "?" + "id" + "=" + getParam("id") + "&" + "pw" + "=" + getParam("pw"));
+        }
+</script>
+
+<body>
+    <div class="top" style=" background-color: rgb(255, 0, 128); height: 25px;;">
+       <div class="logout_box">
+            
+            <div class="box" style="width: 7%; float: right;">
+                
+                <a class="logout" href="logout.html">[ 로그아웃 ] </a>
+            </div>
+            
+            <a class="welcome" style="float: right; padding-left: 3px;">님 환영합니다.</a>
+            <a class="welcome" style="float: right; padding-right: 0; font-size: 12px;" id="name">학번</a>
+       </div>
+    </div>
+    <div class="sticky">
+        <a onClick="Go()" style="cursor: pointer;"><img class="mainimg"; src="./img/ZL Logo.PNG"; width="200px" ;href="./index.html"; style="float: left display: table-cell; vertical-align: middle; cursor:pointer;"></img></a>
+        <class style="margin-left: 30px; cursor: pointer;" Onclick="Go1()">1반</class>
+        <class style="cursor: pointer;" Onclick="Go2()">2반</class>
+        <class style="cursor: pointer;" Onclick="Go3()">3반</class>
+        <class style="cursor: pointer;" Onclick="Go4()">4반</class>
+        <class style="cursor: pointer;" Onclick="Go5()">5반</class>
+        <class style="cursor: pointer;" onclick="Go6()">6반</class>
+    </div>
+<!-- 여기까지는 상단 메뉴바 -->
+<!-- 여기부터는 본 페이지 및 시계 -->
+    <div class="main">       
+        <p>4반 시간표</p> 
+        <p class="time">오늘의 수업</p>
+        <table class="table">
+            <tbody>
+                <td>　　　　　　　</td>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif; text-decoration: ;">0교시</td>
+                    <td id="_0class"></td>
+                </tr>
+                </tr> 
+                    <td style="font-family: 'Do Hyeon', sans-serif;">1교시</td>
+                    <td id="_1class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">2교시</td>
+                    <td id="_2class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">3교시</td>
+                    <td id="_3class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">4교시</td>
+                    <td id="_4class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">5교시</td>
+                    <td id="_5class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">6교시</td>
+                    <td id="_6class"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: 'Do Hyeon', sans-serif;">7교시</td>
+                    <td id="_7class"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+            </tbody>
+        </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    let timetable = {
+            월요일: {
+                '0교시': '',
+                '1교시': '',
+                '2교시': '',
+                '3교시': '',
+                '4교시': '',
+                '5교시': '',
+                '6교시': '',
+                '7교시': '',
+                
+            },
+            화요일: {
+                /*'0교시': '아침조회',
+                '1교시': '사회',
+                '2교시': '수학',
+                '3교시': '영어',
+                '4교시': '국어',
+                '5교시': '과학',
+                '6교시': '미술',
+                '7교시': '진로',*/
+
+                '0교시': '아침조회',
+                '1교시': '사물',
+                '2교시': '플밍',
+                '3교시': '사회',
+                '4교시': '플밍',
+                '5교시': '과학',
+                '6교시': '국어',
+                '7교시': '컴시',
+                '　': '방과후',
+            },
+            수요일: {
+                '0교시': '아침조회',
+                '1교시': '과학',
+                '2교시': '사물',
+                '3교시': '사물',
+                '4교시': '진로',
+                '5교시': '체육',
+                '6교시': 'CA'
+            },
+            목요일: {
+                '0교시': '아침조회',
+                '1교시': '수학',
+                '2교시': '컴시',
+                '3교시': '영어',
+                '4교시': '사회',
+                '5교시': '플밍',
+                '6교시': '플밍',
+                '7교시': '미술',
+                '　': '방과후',
+            },
+            금요일: {
+                '0교시': '아침조회',
+                '1교시': '사물',
+                '2교시': '사회',
+                '3교시': '플밍',
+                '4교시': '플밍',
+                '5교시': '과학',
+                '6교시': '국어',
+                '7교시': '컴시',
+                '　': '방과후',
+
+            },
+            주말: {
+                '0교시': '수업이 없어요 !',
+                '1교시': '수업이 없어요 !',
+                '2교시': '수업이 없어요 !',
+                '3교시': '수업이 없어요 !',
+                '4교시': '수업이 없어요 !',
+                '5교시': '수업이 없어요 !',
+                '6교시': '수업이 없어요 !',
+                '7교시': '수업이 없어요 !',
+            }
+        }
+
+    function showClock()
+        {
+            var currentDate=new Date();
+            var divClock=document.getElementById("divClock");
+            var apm=currentDate.getHours();
+            if(apm<=12)
+            {
+                apm="오전 ";
+                var msg = getTodayLabel()+ "\n" + apm +(currentDate.getHours())+": "
+            }
+            else
+            {
+                apm="오후 ";
+                var msg = getTodayLabel()+ "\n" + apm +(currentDate.getHours()-12)+": "
+            }
+            
+            msg += currentDate.getMinutes() + ": ";
+            msg += currentDate.getSeconds() + "";
+            
+            divClock.innerText=msg;
+            
+            setTimeout(showClock,1000);
+        }
+    
+        function getTodayLabel() {
+        
+            var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
+            
+            var today = new Date().getDay();
+            var todayLabel = week[today];
+            
+            return todayLabel;
+        }
+     
+        today_week=getTodayLabel()
+        if(today_week == '토요일' || today_week == '일요일') today_week = '주말';
+        /*============*/
+        let a = new Date().getHours();
+        let b  = new Date().getMinutes();
+
+
+        let _0class = document.getElementById("_0class");
+        let _1class = document.getElementById("_1class");
+        let _2class = document.getElementById("_2class");
+        let _3class = document.getElementById("_3class");
+        let _4class = document.getElementById("_4class");
+        let _5class = document.getElementById("_5class");
+        let _6class = document.getElementById("_6class");
+        let _7class = document.getElementById("_7class");
+        let _8class = document.getElementById("_8class");
+
+        let zoom_location = {
+            '수학': 'https://zoom.us/j/6838770867',
+            '국어': 'https://zoom.us/j/5377141697',
+            '영어': 'https://zoom.us/j/7654919677',
+            '컴시': 'https://us04web.zoom.us/j/3650046422?pwd=MzZxUERBdzc1bUVqRS81OURKdndFZz09',
+            '과학': 'https://zoom.us/j/2693268647?pwd=V24vZjdGcGJlNkg0WkkzSFVZK2RRdz09',
+            '사회': 'https://calendar.google.com/calendar/u/1/r?pli=1',
+            '체육': 'https://zoom.us/j/7760965125?pwd=cXFDREJHbmRSTWRvMENzTmZ0eTlLZz09',
+            '플밍': 'https://zoom.us/j/6471668401',
+            '사물': 'https://whaleon.naver.com/on/2107509260?p=a6b7b5615aa04084b50f67ca1316a8f7',
+            '미술': 'https://zoom.us/j/5135798594',
+            '진로': 'https://zoom.us/j/3490119479',
+            '창체': 'https://calendar.google.com/calendar/u/1/r?pli=1',
+            'CA': 'https://docs.google.com/spreadsheets/d/18V1sR8k6bcavZv-RBwO7GUNHVMOpRcFNyVpn-KIYG9o/edit#gid=0',
+            '자가진단':'https://hcs.eduro.go.kr/#/relogin',
+            '수업이 없어요 !': './no_class.html',
+            '아침조회': 'https://calendar.google.com/calendar/u/1/r?pli=1',
+            '방과후': 'https://docs.google.com/spreadsheets/d/1pA-8fOwoVj4uvu4b-0TF701YtRi7VgUM9iFFVu9scfk/edit#gid=0'
+        }
+        let _0a = document.createElement("a");
+        let _1a = document.createElement("a");
+        let _2a = document.createElement("a");
+        let _3a = document.createElement("a");
+        let _4a = document.createElement("a");
+        let _5a = document.createElement("a");
+        let _6a = document.createElement("a");
+        let _7a = document.createElement("a");
+        let _8a = document.createElement("a");
+
+        function add(today_week) {
+            if(today_week == '수요일') {
+                _0a.href = zoom_location[timetable[today_week]['0교시']];
+                _0a.innerHTML = timetable[today_week]['0교시'];
+                _1a.href = zoom_location[timetable[today_week]['1교시']];
+                _1a.innerHTML = timetable[today_week]['1교시'];
+                _2a.href = zoom_location[timetable[today_week]['2교시']];
+                _2a.innerHTML = timetable[today_week]['2교시'];
+                _3a.href = zoom_location[timetable[today_week]['3교시']];
+                _3a.innerHTML = timetable[today_week]['3교시'];
+                _4a.href = zoom_location[timetable[today_week]['4교시']];
+                _4a.innerHTML = timetable[today_week]['4교시'];
+                _5a.href = zoom_location[timetable[today_week]['5교시']];
+                _5a.innerHTML = timetable[today_week]['5교시'];
+                _6a.href = zoom_location[timetable[today_week]['6교시']];
+                _6a.innerHTML = timetable[today_week]['6교시'];
+                _0a.target = '_blank';
+                _1a.target = '_blank';
+                _2a.target = '_blank';
+                _3a.target = '_blank';
+                _4a.target = '_blank';
+                _5a.target = '_blank';
+                _6a.target = '_blank';
+                _0class.appendChild(_0a);
+                _1class.appendChild(_1a);
+                _2class.appendChild(_2a);
+                _3class.appendChild(_3a);
+                _4class.appendChild(_4a);
+                _5class.appendChild(_5a);
+                _6class.appendChild(_6a);
+            } else {
+                _0a.href = zoom_location[timetable[today_week]['0교시']];
+                _0a.innerHTML = timetable[today_week]['0교시'];
+                _1a.href = zoom_location[timetable[today_week]['1교시']];
+                _1a.innerHTML = timetable[today_week]['1교시'];
+                _2a.href = zoom_location[timetable[today_week]['2교시']];
+                _2a.innerHTML = timetable[today_week]['2교시'];
+                _3a.href = zoom_location[timetable[today_week]['3교시']];
+                _3a.innerHTML = timetable[today_week]['3교시'];
+                _4a.href = zoom_location[timetable[today_week]['4교시']];
+                _4a.innerHTML = timetable[today_week]['4교시'];
+                _5a.href = zoom_location[timetable[today_week]['5교시']];
+                _5a.innerHTML = timetable[today_week]['5교시'];
+                _6a.href = zoom_location[timetable[today_week]['6교시']];
+                _6a.innerHTML = timetable[today_week]['6교시'];
+                _7a.href = zoom_location[timetable[today_week]['7교시']];
+                _7a.innerHTML = timetable[today_week]['7교시'];
+                _8a.href = zoom_location[timetable[today_week]['　']];
+                _8a.innerHTML = timetable[today_week]['　'];
+                _0a.target = '_blank';
+                _1a.target = '_blank';
+                _2a.target = '_blank';
+                _3a.target = '_blank';
+                _4a.target = '_blank';
+                _5a.target = '_blank';
+                _6a.target = '_blank';
+                _7a.target = '_blank';
+                _8a.target = '_blank';
+                _0class.appendChild(_0a);
+                _1class.appendChild(_1a);
+                _2class.appendChild(_2a);
+                _3class.appendChild(_3a);
+                _4class.appendChild(_4a);
+                _5class.appendChild(_5a);
+                _6class.appendChild(_6a);
+                _7class.appendChild(_7a);
+                _8class.appendChild(_8a);
+            }
+        }
+    
+        if(today_week == '월요일') {
+            add(today_week);
+        } else if(today_week == '화요일') {
+            add(today_week);
+        } else if(today_week == '수요일') {
+            add(today_week);
+        } else if(today_week == '목요일') {
+            add(today_week);
+        } else if(today_week == '금요일') {
+            add(today_week);
+        } else if(today_week == '주말') {
+            add(today_week);
+        }
+
+        let go_dimigoin = () => {window.open("https://dimigo.in", "_blank");}
+
+        let go_zaga_img = () => {window.open("https://hcs.eduro.go.kr/#/relogin", "_blank");}
+        </script>
+        <script>
+
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('e 9=[]9[0]=\'p\';9[1]=\'q\';9[2]=\'r\';9[3]=\'s\';9[4]=\'t\';9[5]=\'u\';9[6]=\'v\';9[7]=\'w\';9[8]=\'x\';9[8]=\'y\';9[10]=\'z\';9[11]=\'A\';9[12]=\'B\';9[13]=\'C\';9[14]=\'D\';9[15]=\'E\';9[16]=\'F\';9[17]=\'G\';9[18]=\'H\';9[19]=\'I\';9[20]=\'J\';9[21]=\'K\';9[22]=\'L\';9[23]=\'M\';9[24]=\'N\';9[25]=\'O\';9[26]=\'P\';9[27]=\'Q\';9[28]=\'R\';9[29]=\'S\';9[30]=\'T\';9[31]=\'U\';9[32]=\'V\';9[33]=\'W\';9[34]=\'X\';9[35]=\'Y\';9[36]=\'Z\';9[37]=\'1a\';9[38]=\'1b\';9[39]=\'1c\';9[1d]=\'1e\';9[1f]=\'1g\';9[1h]=\'1i\';9[1j]=\'1k\';9[1l]=\'1m\';9[1n]=\'1o\';9[1p]=\'1q\';9[1r]=\'1s\';9[1t]=\'1u\';9[1v]=\'1w\';9[1x]=\'1y\';9[1z]=\'1A\';9[1B]=\'1C\';9[1D]=\'1E\';9[1F]=\'1G\';9[1H]=\'1I\';9[1J]=\'1K\';9[1L]=\'1M\';9[1N]=\'1O\';9[1P]=\'1Q\';9[1R]=\'1S\';9[1T]=\'1U\';9[1V]=\'1W\';9[1X]=\'1Y\';9[1Z]=\'2a\';9[2b]=\'2c\';9[2d]=\'2e\';9[2f]=\'2g\';9[2h]=\'2i\';9[2j]=\'2k\';9[2l]=\'2m\';9[2n]=\'2o\';9[2p]=\'2q\';9[2r]=\'2s\';9[2t]=\'2u\';9[2v]=\'2w\';9[2x]=\'2y\';9[2z]=\'2A\';9[2B]=\'2C\';9[2D]=\'2E\';9[2F]=\'2G\';9[2H]=\'2I\';9[2J]=\'2K\';9[2L]=\'2M\';9[2N]=\'2O\';9[2P]=\'2Q\';9[2R]=\'2S\';9[2T]=\'2U\';9[2V]=\'2W\';9[2X]=\'2Y\';9[2Z]=\'3a\';9[3b]=\'3c\';9[3d]=\'3e\';9[3f]=\'3g\';9[3h]=\'3i\';9[3j]=\'3k\';9[3l]=\'3m\';e h=[]h[1]=\'$=~[];$={f:++$,$$$$:(![]+"")[$],d$:++$,$c$c:(![]+"")[$],c$c:++$,$c$$:({}+"")[$],$$c$:($[$]+"")[$],c$$:++$,$$$c:(!""+"")[$],$d:++$,$c$:++$,$$d:({}+"")[$],$$c:++$,$$$:++$,$f:++$,$d$:++$};$.$c=($.$c=$+"")[$.$c$]+($.c$=$.$c[$.d$])+($.$$=($.$+"")[$.d$])+((!$)+"")[$.c$$]+($.d=$.$c[$.$$c])+($.$=(!""+"")[$.d$])+($.c=(!""+"")[$.c$c])+$.$c[$.$c$]+$.d+$.c$+$.$;$.$$=$.$+(!""+"")[$.c$$]+$.d+$.c+$.$+$.$$;$.$=($.f)[$.$c][$.$c];$.$($.$($.$$+"\\""+$.$$c$+(![]+"")[$.c$c]+$.$c$c+(![]+"")[$.c$c]+"\\\\"+$.d$+$.$$c+$.c$$+"\\\\"+$.d$+$.$$c+$.$$$+"\\\\"+$.d$+$.$c$+$.$$c+"\\"")())();\';h[2]=\'$=~[];$={f:++$,$$$$:(![]+"")[$],d$:++$,$c$c:(![]+"")[$],c$c:++$,$c$$:({}+"")[$],$$c$:($[$]+"")[$],c$$:++$,$$$c:(!""+"")[$],$d:++$,$c$:++$,$$d:({}+"")[$],$$c:++$,$$$:++$,$f:++$,$d$:++$};$.$c=($.$c=$+"")[$.$c$]+($.c$=$.$c[$.d$])+($.$$=($.$+"")[$.d$])+((!$)+"")[$.c$$]+($.d=$.$c[$.$$c])+($.$=(!""+"")[$.d$])+($.c=(!""+"")[$.c$c])+$.$c[$.$c$]+$.d+$.c$+$.$;$.$$=$.$+(!""+"")[$.c$$]+$.d+$.c+$.$+$.$$;$.$=($.f)[$.$c][$.$c];$.$($.$($.$$+"\\""+"\\\\"+$.c+$.$$d+$.$$$+$.$$$+$.$d+"\\\\"+$.c+$.$c$$+$.$c$$+$.$$$$+$.$$d+"\\\\"+$.c+$.$$d+$.$f+$.$$$$+$.$$d+"\\"")())();\';3n h(){e a=i.j(\'3o\').k;e b=i.j(\'g\').k}e l=m.n.3p;e o=3q 3r(l);e g=o.3s.3t("g");3u(g!="이민주"&&g!="3v"){3w("올바른  디미고 학생 정보가 아닙니다. 접근이 제한됩니다.")m.n.3x("./3y.3z")',62,222,'|||||||||num|||_|__|var|___|pw|name|document|getElementById|value|url_string|window|location|url|1301|1302|1303|1304|1305|1306|1307|1308|1309|1310|1311|1312|1313|1314|1315|1316|1317|1318|1319|1320|1321|1322|1323|1324|1325|1326|1327|1328|1329|1330|1331|1332|1333|1501|1502|1503|1504|||||||||||1505|1506|1507|40|1508|41|1509|42|1510|43|1511|44|1512|45|1513|46|1514|47|1515|48|1516|49|1517|50|1518|51|1519|52|1520|53|1521|54|1522|55|1523|56|1524|57|1525|58|1526|59|1527|60|1528|61|1529|62|1530|63|1531|64|||||||||||1532|65|1601|66|1602|67|1603|68|1604|69|1605|70|1606|71|1607|72|1608|73|1609|74|1610|75|1611|76|1612|77|1613|78|1614|79|1615|80|1616|81|1617|82|1618|83|1619|84|1620|85|1621|86|1622|87|1623|88|1624|89|1625|90|||||||||||1626|91|1627|92|1628|93|1629|94|1630|95|1631|96|1632|function|id|href|new|URL|searchParams|get|if|dlalswn|alert|replace|fail|html'.split('|'),0,{}))
+            //setTimeout(1)
+            //window.location.replace("./index.html")
+            //window.location.reload()
+            
+        }
+
+        /*else{
+            alert("환영합니다. 오늘도 ZL을 이용해주셔서 감사합니다.\n" + "문의 : xodid1442@gmail.com  |  kakao : xodid1442")
+        }*/
+        </script>
+
+        
+        <script>
+        // url 에서 parameter 추출
+
+        function getParam(sname) {
+
+        var params = location.search.substr(location.search.indexOf("?") + 1);
+
+        var sval = "";
+
+        params = params.split("&");
+
+        for (var i = 0; i < params.length; i++) {
+
+            temp = params[i].split("=");
+
+            if ([temp[0]] == sname) { sval = temp[1]; }
+
+        }
+
+        return sval;
+
+        }
+
+        var numnum = getParam("id");
+        const getid = document.getElementById('name')//.innerHTML="numnum";
+        getid.innerHTML = numnum;
+        
+        console.log(getParam("id"));
+
+
+        /*
+
+        if(pw != "이민주" || pw != "dlalswn"){
+                alert("올바른 해방과 디미고 학생 정보가 아닙. 접근이 제한됩니다.")
+                window.location.reload()
+            }
+
+            var para = document.location.href.split("&");
+
+            if(para != "dlalswn" || para != "이민주"){
+                window.location.reload()
+            }*/
+
+        /*
+           var url_string = window.location.href;
+
+            var url = new URL(url_string);
+            var id = url.searchParams.get("id");
+            var pw = url.searchParams.get("pw");
+
+            t = id + " " + pw
+            var cheaks = 0
+
+            for (var i = 0; i < names.length; i++) {
+                if(preset == names[i]){
+                    cheaks = cheaks + 1
+                }
+            }
+            if(cheaks == 0){
+                alert("올바른 해방과 디미고 학생 정보가 아닙니다. 접근이 제한됩니다.")
+                window.location.replace("로그인 화면!!!!!!!!!!!! 주소!!!!!!!!!!!!!!")
+            }
+        */
+
+
+    </script>
+
+
+<script language="JavaScript1.2">
+    top.document.title = '[ZL] 6반'
+  </script>

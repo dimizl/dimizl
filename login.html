@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <meta charset='utf-8'>
+    <title>[ZL] LogIn</title>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/mzllogo.png">
+    <!--<style>/*
+    @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap&subset=korean');
+        * { font-family: ,"S-Core", sans-serif; }
+        @font-face {
+            font-family: 'S-Core-1';
+            font-weight:100;
+            src: url('./converted-files/S-CoreDream-1Thin.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'S-Core-2';
+            font-weight:200;
+            src: url('./converted-files/S-CoreDream-2ExtraLight.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'S-Core-3';
+            font-weight:300;
+            src: url('./converted-files/S-CoreDream-3Light.woff') format('woff');
+            }
+        @font-face {
+            font-family: 'S-Core-4';
+            font-weight:400;
+            src: url('./converted-files/S-CoreDream-4Regular.woff') format('woff');
+            }
+        @font-face {
+            font-family: 'S-Core-5';
+            font-weight:500;
+            src: url('./converted-files/S-CoreDream-5Medium.woff') format('woff');
+            }  
+        @font-face {
+	        font-family: 'S-Core-6';
+	        font-weight:600;
+	        src: url('./converted-files/S-CoreDream-6Bold.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'S-Core-7';
+            font-weight:700;
+            src: url('./converted-files/S-CoreDream-7ExtraBold.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'S-Core-8';
+            font-weight:800;
+            src: url('./converted-files/S-CoreDream-8Heavy.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'S-Core-9';
+            font-weight:900;
+            src: url('./converted-files/S-CoreDream-9Black.woff') format('woff');
+        }
+
+        .Login{
+            font-family: 'S-Core-5';
+            text-align: center;
+            margin: auto;
+            display: block;
+            font-size: 2.0rem;
+        }
+        .signup{
+            font-family: 'S-Core-5';
+            text-decoration: none;
+            color:black;
+            font-size: 1.2rem;
+        }*/
+    </style>-->
+
+    <style>
+        @import url(./main.css);
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');  
+        .Login{
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin: auto;
+            display: block;
+            font-size: 2.0rem;
+        }
+        .signup{
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: 300;
+            text-decoration: none;
+            color:black;
+            font-size: 1.2rem;
+        }
+        
+
+        body {
+        overflow: hidden;
+        height: 100vh;
+
+        /*background-image: url("02.jpg");
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            background-size: cover;*/
+
+        background: url("./img/background_img.png") no-repeat center/cover;
+
+        }
+
+
+    </style>
+
+
+</head>
+
+    <body style="background-color: white;">
+        <div class="out" style="display: block; margin: auto; text-align: center; width:590px; margin-top: 70px; height: 800px; background-color: white;">
+            <div id="Loginbox">
+                <br style=" height:30px;">
+                <img src="./img/ZL Logo.PNG"style="display: block; margin: auto; width:350px; margin-bottom: 50px;"/>
+                <form method="get" action="./main.html">
+                    <input type="text" style="width: 300px; height: 35px; margin-bottom: 10px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="학번" name="id"><br>
+                    <input type="password" style="width: 300px; height: 35px; margin-bottom: 1px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="비밀번호" name="pw"><br><br>
+                    <input type="submit" value="로그인"; class="btn btn-danger"
+                    style="width: 300px; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 18px; margin-bottom: 10px;;";
+                    /><br>
+                    <input type='reset' value='초기화'  class="btn btn-outline-secondary"
+                            style="width: 300px; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 18px;";
+                        />
+                    </form>
+            </div>
+            <div class="Login" style="text-align: center; margin-top: 100px;">
+                <fieldset style="width: 500px; height: 220px; margin:auto; border: 1px solid black;">
+                    <legend style="width: 100px;">계정 안내</legend>
+                        <a class="signup">* 기본 <id style=" color: blueviolet;">비밀번호는 제제쌤의 본명</id>입니다. *<br><qd style="font-family: 'Gothic A1', sans-serif; font-weight: 700; font-size: 1.0rem">
+                            문의 사항 : kakao : xodid1442 <br> E-mail : xodid1442@gmail.com | Discord : 배세웅#8650</a></qd>
+
+                </fieldset>
+                
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+        <script>
+            history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+        };
+        </script>
+
+
+
+
+        <!--<div class="Login">
+        <fieldset style="width:500px; margin:auto">
+            <legend>로그인</legend>
+                <form method='post' action='main.html'>
+                    <p>　아이디 : <input name='id' id='id' type='text'> </p>
+                    <p>비밀번호 : <input name='pw' id='pw' type='password'> </p>
+                    <input type='submit' value='로그인'
+                        style="font-family:'S-Core-9'; font-size: 20px;";
+                    />
+                    <input type='reset' value='초기화'
+                        style="font-family:'S-Core-9'; font-size: 20px;";
+                    /><br><br>
+                    <a class="signup"href='signup.html'>* 기본 <b>아이디는 학번 비밀번호는 이름</b>입니다. *<br>(예: 1000, ghdrlfehd) <br>비번 변경 문의 : kakao : xodid1442@gmail.com | e-mail : poketgg@dimigo.hs.kr   xodid1442@gmail.com</a>
+                
+                </form>
+        </fieldset>
+        </div>
+    </body>
+</html>
+</body>
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="Logo">
+    <img src="ZL Logo.PNG" alt="My Image" width="60"
+    style="display: block; margin: 0 auto; width:60px;">
+    <br><br><br><br>
+    </div>
+    <div class="button">
+    <button type="button" class="google" onClick="location.href='https://google.com'">
+        　로그인　
+        
+    </button>
+    </div>
+
+</body>
+-->
+
+<script>
+    
+
+
+</script>
+
+
+
+
+
+        <!--<div class="Login">
+        <fieldset style="width:500px; margin:auto">
+            <legend>로그인</legend>
+                <form method='post' action='main.html'>
+                    <p>　아이디 : <input name='id' id='id' type='text'> </p>
+                    <p>비밀번호 : <input name='pw' id='pw' type='password'> </p>
+                    <input type='submit' value='로그인'
+                        style="font-family:'S-Core-9'; font-size: 20px;";
+                    />
+                    <input type='reset' value='초기화'
+                        style="font-family:'S-Core-9'; font-size: 20px;";
+                    /><br><br>
+                    <a class="signup"href='signup.html'>* 기본 <b>아이디는 학번 비밀번호는 이름</b>입니다. *<br>(예: 1000, ghdrlfehd) <br>비번 변경 문의 : kakao : xodid1442@gmail.com | e-mail : poketgg@dimigo.hs.kr   xodid1442@gmail.com</a>
+                
+                </form>
+        </fieldset>
+        </div>
+    </body>
+</html>
+</body>-->
+<!--<body>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="Logo">
+    <img src="ZL Logo.PNG" alt="My Image" width="60"
+    style="display: block; margin: 0 auto; width:60px;">
+    <br><br><br><br>
+    </div>
+    <div class="button">
+    <button type="button" class="google" onClick="location.href='https://google.com'">
+        　로그인　
+        
+    </button>
+    </div>
+
+</body>
+-->
+
+<script>
+    
+
+
+</script>
