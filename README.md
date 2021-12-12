@@ -1,2 +1,2 @@
-# dimizl.github.io
+# dimizl
 ### -- ⚠️ 대공사중.. -- 
