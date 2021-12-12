@@ -5,24 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[ZL] MAIN</title>
-
-    <link rel="stylesheet" href="class.css">
+    <link href="{{ url_for('static/css', filename='class.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static/css', filename='main.css') }}" rel="stylesheet">
 
 </head>
 <style>
-    @import url("./main.css");
     @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     body {
         height: 100vh;
 
-        /*background-image: url("02.jpg");
-
-            background-repeat: no-repeat;
-
-            background-position: center;
-
-            background-size: cover;*/
 
         background: url("./img/background_img.png") no-repeat center/cover;
 
@@ -417,41 +409,6 @@
         getid.innerHTML = numnum;
         
         console.log(getParam("id"));
-
-
-        /*
-
-        if(pw != "이민주" || pw != "dlalswn"){
-                alert("올바른 해방과 디미고 학생 정보가 아닙. 접근이 제한됩니다.")
-                window.location.reload()
-            }
-
-            var para = document.location.href.split("&");
-
-            if(para != "dlalswn" || para != "이민주"){
-                window.location.reload()
-            }*/
-
-        /*
-           var url_string = window.location.href;
-
-            var url = new URL(url_string);
-            var id = url.searchParams.get("id");
-            var pw = url.searchParams.get("pw");
-
-            t = id + " " + pw
-            var cheaks = 0
-
-            for (var i = 0; i < names.length; i++) {
-                if(preset == names[i]){
-                    cheaks = cheaks + 1
-                }
-            }
-            if(cheaks == 0){
-                alert("올바른 해방과 디미고 학생 정보가 아닙니다. 접근이 제한됩니다.")
-                window.location.replace("로그인 화면!!!!!!!!!!!! 주소!!!!!!!!!!!!!!")
-            }
-        */
 
 
     </script>
