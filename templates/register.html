@@ -43,12 +43,12 @@
             <img src="{{ url_for('static', filename='image/ZLLogo.PNG') }}"style="display: block; margin: auto; width:350px; margin-bottom: 50px;"/>
             <form method="post">
                 <input type="text" style="width: 300px; height: 35px; margin-bottom: 10px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="아이디" name="id"><br>
-                <input type="password" style="width: 300px; height: 35px; margin-bottom: 1px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="비밀번호" name="pw"><br><br>
-                <input type="submit" value="로그인"; class="btn btn-danger"
-                style="width: 300px; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 18px; margin-bottom: 10px;;";
-                /><br>
-                </form>
-                <a class="btn btn-outline-secondary" style="width: 300px; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 18px;"; href="{{ url_for('register') }}">회원가입</a>
+                <input type="text"  style="width: 300px; height: 35px; margin-bottom: 10px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="이메일" name="email"><br>
+                <input type="password" style="width: 300px; height: 35px; margin-bottom: 1px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="비밀번호" name="pw"><br>
+                <input type="password" style="width: 300px; height: 35px; margin-bottom: 1px; font-size: 15px; font-family: 'Gothic A1', sans-serif;" placeholder="비밀번호 확인" name="ckpw"><br>
+                <br>
+                <input type="submit" value="로그인"; class="btn btn-danger" style="width: 300px; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 18px; margin-bottom: 10px;;";/><br>
+            </form>
         </div>
         
     </div>
